@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "concurrently 'pnpm dev:db' 'nuxt dev'",
+    "dev:db": "turso dev --db-file local.db",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -14,6 +15,7 @@
     "@nuxt/icon": "^1.15.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@tailwindcss/vite": "^4.1.11",
+    "concurrently": "^9.2.0",
     "drizzle-orm": "^0.44.3",
     "husky": "^9.1.7",
     "nuxt": "^3.16.0",
