@@ -1,8 +1,8 @@
 import 'dotenv/config';
 import { drizzle } from 'drizzle-orm/libsql';
 
-import env from '~/lib/env.ts';
-import * as schema from './lib/db/schema/index.ts';
+import env from '../env';
+import * as schema from './schema/index';
 
 // You can specify any property from the libsql connection options
 const db = drizzle({ 
