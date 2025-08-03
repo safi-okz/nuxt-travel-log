@@ -7,9 +7,7 @@
         Keep track of your travels and adventures with this simple travel log app.
         Document your journeys, share your experiences, and relive your memories with ease.
       </p>
-      <button class="btn btn-accent">Sign In with GitHub
-        <Icon name="tabler:brand-github" size="24" />
-      </button>
+        <AppGithubAuth />
     </div>
   </div>
 </div>
