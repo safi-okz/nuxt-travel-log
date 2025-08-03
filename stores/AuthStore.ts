@@ -12,7 +12,8 @@ export const useMyAuthStoreStore = defineStore( 'myAuthStoreStore', () =>{
     loading.value = true
     const data = await authClient.signIn.social({
         provider: "github",
-        callbackUrl: "/dashboard"
+        callbackUrl: "/dashboard",
+        errorCallbackURL: '/error'
     })
     loading.value = false
     console.log('github data ', data)
